@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import Navbar from "./(components)/Navbar";
+import Navbar from "./(components)/navbar";
+import Sidebar from "./(components)/sidebar";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={`light flex bg-gray-50 text-gray-900 w-full min-h-screen`}>
-      Sidebar
+      <Sidebar />
       <main
         className={`flex flex-col w-full h-full py-7 px-9 bg-gray-50 md:pl-24`}
       >
