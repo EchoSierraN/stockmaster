@@ -82,10 +82,10 @@ const Sidebar = () => {
         }`}
       >
         <Image
-          src=""
+          src="/edstock_logo.png"
           alt="edstock-logo"
-          width={27}
-          height={27}
+          width={270}
+          height={270}
           className="rounded w-8"
         />
         <h1
