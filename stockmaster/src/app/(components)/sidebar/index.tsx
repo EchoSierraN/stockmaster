@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
 
-// import { useAppDispatch, useAppSelector } from "@/app/redux";
-// import { setIsSidebarCollapsed } from "@/state";
+import { useAppDispatch, useAppSelector } from "@/app/redux";
+import { setIsSidebarCollapsed } from "@/state";
 import {
   Archive,
   CircleDollarSign,
@@ -16,6 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 interface SidebarLinkProps {
   href: string;
@@ -60,15 +60,14 @@ const SidebarLink = ({
 };
 
 const Sidebar = () => {
-  // const dispatch = useAppDispatch();
-  // const isSidebarCollapsed = useAppSelector(
-  //   (state) => state.global.isSidebarCollapsed
-  // );
-  const isSidebarCollapsed = false;
+  const dispatch = useAppDispatch();
+  const isSidebarCollapsed = useAppSelector(
+    (state) => state.global.isSidebarCollapsed
+  );
 
-  // const toggleSidebar = () => {
-  //   dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
-  // };
+  const toggleSidebar = () => {
+    dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
+  };
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
@@ -83,7 +82,6 @@ const Sidebar = () => {
         }`}
       >
         <Image
-          // src="https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/logo.png"
           src=""
           alt="edstock-logo"
           width={27}
@@ -100,7 +98,7 @@ const Sidebar = () => {
 
         <button
           className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
-          onClick={() => {}}
+          onClick={toggleSidebar}
         >
           {""}
           <Menu className="w-4 h-4" />
