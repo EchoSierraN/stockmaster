@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const getDashboardMetrics = async (
+export const getDashboardMetrics = async (
     req: Request,
     res: Response
 ): Promise<void> => {

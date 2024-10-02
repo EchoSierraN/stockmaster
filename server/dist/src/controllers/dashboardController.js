@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDashboardMetrics = void 0;
 const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
 const getDashboardMetrics = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -56,3 +57,4 @@ const getDashboardMetrics = (req, res) => __awaiter(void 0, void 0, void 0, func
         res.status(500).json({ message: "Error retrieving dashboard metrics.", error: error });
     }
 });
+exports.getDashboardMetrics = getDashboardMetrics;
