@@ -5,6 +5,7 @@ import helmet from "helmet";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import dashboardRoutes from "./routes/dashboardRoutes";
+import productRoute from "./routes/productRoutes";
 
 dotenv.config();
 const app = express();
@@ -17,8 +18,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
 
-//http://localhost:3000/dashboard
+//eg - http://localhost:3000/dashboard
 app.use("/dashboard", dashboardRoutes)
+//eg - http://localhost:3000/products
+app.use("/products", productRoute)
 
 
 /* SERVER */
