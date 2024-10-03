@@ -82,10 +82,11 @@ const Sidebar = () => {
         }`}
       >
         <Image
-          src="/edstock_logo.png"
+          // src="https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/logo.png"
+          src={"/edstock_logo.png"}
           alt="edstock-logo"
-          width={270}
-          height={270}
+          width={27}
+          height={27}
           className="rounded w-8"
         />
         <h1
@@ -93,14 +94,14 @@ const Sidebar = () => {
             isSidebarCollapsed ? "hidden" : "block"
           } font-extrabold text-2xl`}
         >
-          EDSTOCK
+          StockMaster
         </h1>
 
         <button
           className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
           onClick={toggleSidebar}
         >
-          {""}
+          {}
           <Menu className="w-4 h-4" />
         </button>
       </div>
