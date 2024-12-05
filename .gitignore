@@ -1,7 +1,7 @@
-client/node_modules/
+stockmaster/node_modules/
 server/node_modules/
-client/dist/
+stockmaster/dist/
 server/dist/
-client/.env/
+stockmaster/.env/
 server/.env/
-client/.next/
+stockmaster/.next/
